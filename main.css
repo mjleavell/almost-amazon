@@ -3,6 +3,32 @@ body {
 }
 
 h1 {
+    margin: 20px;
     font-weight: 700;
     text-align: center;
+}
+
+#book {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.card {
+    text-align: center;
+    margin: 20px;
+}
+
+.card-body {
+    padding: 5px 5px 10px 5px;
+}
+
+.card h3 {
+    font-weight: 700;
+    font-size: 28px;
+    margin-bottom: 4px;
+}
+
+.card img {
+    margin: 10px auto 8px auto;
 }
