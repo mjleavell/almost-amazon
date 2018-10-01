@@ -3,4 +3,19 @@ const printToDom = (stringToPrint, elementId) => {
     selectedDiv.innerHTML += stringToPrint;
 };
 
-export {printToDom}
+const writeToDom = (stringToPrint, elementId) => {
+    const selectedDiv = document.getElementById(elementId);
+    selectedDiv.innerHTML = stringToPrint;
+};
+
+const showPage = () => {
+    document.getElementById('navLinks').addEventListener('click', () => {
+        if (event.target.id === "nav-cart") {
+            document.getElementById('book').innerHTML = '';
+        } else if (event.target.id === "nav-home") {
+            document.getElementById('cart').innerHTML = '';
+        }
+    })
+}
+
+export {printToDom, writeToDom, showPage}

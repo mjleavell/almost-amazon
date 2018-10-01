@@ -1,11 +1,16 @@
-body {
-    font-family: 'Roboto', sans-serif;
-}
-
 h1 {
     margin: 20px;
     font-weight: 700;
     text-align: center;
+}
+
+.navbar img {
+    height: 24px;
+    width: 24px;
+}
+
+.navbar ul:first-child {
+    margin-right: 75%;
 }
 
 #book {
@@ -31,4 +36,23 @@ h1 {
 
 .card img {
     margin: 10px auto 8px auto;
+}
+
+.shopping-cart {
+    height: 300px;
+    width: 75%;
+    margin: 15px;
+}
+
+.shopping-cart h2 {
+    text-align: center;
+    font-weight: 700;
+}
+
+.shopping-cart-card {
+    padding: 15px;
+}
+
+.shopping-cart-card a {
+    width: 196px;
 }
