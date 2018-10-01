@@ -1,4 +1,5 @@
 import {printToDom} from '../helpers/util.js';
+import {shoppingCartBuilder} from './cart.js';
 
 const bookObj = [
     {
@@ -49,13 +50,13 @@ const bookBuilder = () => {
     let newString = "";
     for (let i = 0; i < bookObj.length; i++) {
         newString += `<div class="card book" style="width: 25rem;">`
-        newString += `<img class="card-img-top" src="${bookObj[i].image}" style="height: 225px; width: 150px;" alt="Card image cap">`
-        newString += `<div class="card-body">`
-        newString += `<h3 class="card-title">${bookObj[i].title}</h3>`
-        newString += `<h5 class="card-text">Author: ${bookObj[i].author}</h5>`
-        newString += `<p class="card-text">Price: ${bookObj[i].price}</p>`
-        newString += `<a href="#" id="btn-${i}" class="btn btn-secondary">Add to Cart</a>`
-        newString += `</div>`
+        newString +=    `<img class="card-img-top" src="${bookObj[i].image}" style="height: 225px; width: 150px;" alt="Card image cap">`
+        newString +=    `<div class="card-body">`
+        newString +=        `<h3 class="card-title">${bookObj[i].title}</h3>`
+        newString +=        `<h5 class="card-text">Author: ${bookObj[i].author}</h5>`
+        newString +=        `<p class="card-text">Price: ${bookObj[i].price}</p>`
+        newString +=        `<a href="#cart-tab" id="btn-${i}" class="btn btn-secondary">Add to Cart</a>`
+        newString +=    `</div>`
         newString += `</div>`;
     }
     printToDom(newString, 'book');
@@ -69,9 +70,10 @@ const cartClick = () => {
     let button = document.getElementsByClassName('btn');
     for (let i = 0; i < bookObj.length; i++) {
         button[i].addEventListener('click', () => {
-            console.log('hi');
+            shoppingCartBuilder(bookObj[i].title, bookObj[i].price);
+            document.getElementById('book').innerHTML = '';
         })
     }
 }
 
-export {getBooks, cartClick}
+export {bookObj, getBooks, cartClick}
