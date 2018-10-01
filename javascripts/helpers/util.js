@@ -8,14 +8,14 @@ const writeToDom = (stringToPrint, elementId) => {
     selectedDiv.innerHTML = stringToPrint;
 };
 
-const showPage = () => {
-    document.getElementById('navLinks').addEventListener('click', () => {
-        if (event.target.id === "nav-cart") {
-            document.getElementById('book').innerHTML = '';
-        } else if (event.target.id === "nav-home") {
-            document.getElementById('cart').innerHTML = '';
-        }
-    })
-}
+// const showPage = () => {
+//     document.getElementById('navLinks').addEventListener('click', () => {
+//         if (event.target.id === "nav-cart") {
+//             document.getElementById('book').innerHTML = '';
+//         } else if (event.target.id === "nav-home") {
+//             document.getElementById('cart').innerHTML = '';
+//         }
+//     })
+// }
 
-export {printToDom, writeToDom, showPage}
+export {printToDom, writeToDom}
