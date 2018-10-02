@@ -6,43 +6,43 @@ const bookObj = [
         title: "Homo Deus",
         author: "Yuval Noah Harari",
         price: "$35.00",
-        image: "https://upload.wikimedia.org/wikipedia/en/thumb/7/73/Homo_Deus.jpg/200px-Homo_Deus.jpg"
-        // discount: true 
+        image: "https://upload.wikimedia.org/wikipedia/en/thumb/7/73/Homo_Deus.jpg/200px-Homo_Deus.jpg",
+        discountAvail: true 
     },
     {
         title: "Something in the Water",
         author: "Catherine Steadman",
         price: "$27.00",
-        image: "https://images.gr-assets.com/books/1528120440l/36388243.jpg"
-        // discount: true 
+        image: "https://images.gr-assets.com/books/1528120440l/36388243.jpg",
+        discountAvail: false 
     },
     {
         title: "All the Light We Cannot See",
         author: "Anthony Doerr",
         price: "$27.00",
-        image: "https://upload.wikimedia.org/wikipedia/en/thumb/2/22/All_the_Light_We_Cannot_See_%28Doerr_novel%29.jpg/220px-All_the_Light_We_Cannot_See_%28Doerr_novel%29.jpg"
-        // discount: true 
+        image: "https://upload.wikimedia.org/wikipedia/en/thumb/2/22/All_the_Light_We_Cannot_See_%28Doerr_novel%29.jpg/220px-All_the_Light_We_Cannot_See_%28Doerr_novel%29.jpg",
+        discountAvail: true
     },
     {
         title: "Americanah",
         author: "Chimamanda Ngozi Adichie",
         price: "$28.95",
-        image: "https://cdn-images-1.medium.com/max/1200/1*zimzkP0GSiEw9CXnNizmaw.jpeg"
-        // discount: true 
+        image: "https://cdn-images-1.medium.com/max/1200/1*zimzkP0GSiEw9CXnNizmaw.jpeg",
+        discountAvail: true 
     },
     {
         title: "Our Final Invention",
         author: "James Barrat",
         price: "$20.00",
-        image: "https://images.gr-assets.com/books/1361640176l/17286699.jpg"
-        // discount: true 
+        image: "https://images.gr-assets.com/books/1361640176l/17286699.jpg",
+        discountAvail: false 
     },
     {
         title: "East of Eden",
         author: "John Steinbeck",
         price: "$25.99",
-        image: "https://pictures.abebooks.com/isbn/9780142000656-us-300.jpg"
-        // discount: true 
+        image: "https://pictures.abebooks.com/isbn/9780142000656-us-300.jpg",
+        discountAvail: true 
     }
 ]
 
@@ -70,10 +70,10 @@ const cartClick = () => {
     let button = document.getElementsByClassName('btn');
     for (let i = 0; i < bookObj.length; i++) {
         button[i].addEventListener('click', () => {
-            shoppingCartBuilder(bookObj[i].title, bookObj[i].price);
+            shoppingCartBuilder(bookObj[i].title, bookObj[i].image, bookObj[i].price);
             document.getElementById('book').innerHTML = '';
         })
     }
 }
 
-export {bookObj, getBooks, cartClick}
+export {getBooks, cartClick}

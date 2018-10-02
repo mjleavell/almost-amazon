@@ -1,3 +1,7 @@
+body{
+    margin-bottom: 40px;
+}
+
 h1 {
     margin: 20px;
     font-weight: 700;
@@ -17,11 +21,18 @@ h1 {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    margin-top: 20px;
+}
+
+#cart {
+    width: 50%;
+    margin: 0 auto;
 }
 
 .card {
     text-align: center;
     margin: 20px;
+    padding: 10px;
 }
 
 .card-body {
