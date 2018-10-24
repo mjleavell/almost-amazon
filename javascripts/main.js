@@ -1,11 +1,7 @@
-import {getBooks, cartClick} from './components/store.js';
-import {continueShopping} from './components/cart.js';
-
+import {getBooks} from './components/store.js';
 
 const initializeApp = () => {
     getBooks();
-    cartClick();
-    continueShopping();
 }
 
 initializeApp();
