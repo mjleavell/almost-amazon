@@ -77,4 +77,4 @@ const cartClick = () => {
     }
 }
 
-export {getBooks}
+export {getBooks, bookBuilder}

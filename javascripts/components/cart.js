@@ -1,5 +1,5 @@
 import {writeToDom, discountPrice} from '../helpers/util.js';
-import {getBooks} from './store.js';
+import {getBooks, bookBuilder} from './store.js';
 
 const shoppingCartBuilder = (bookObject) => {
     console.log(bookObject)
@@ -26,8 +26,8 @@ const continueShopping = () => {
     document.getElementById('cart').addEventListener('click', (e) => {
         if (e.target.id === 'btn-shopping') {
             document.getElementById('cart').innerHTML = '';
+            document.getElementById('book').innerHTML = '';
             getBooks();
-            // cartClick();
         }
     })
 }
